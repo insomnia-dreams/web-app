@@ -20,6 +20,14 @@ export const fetchCatalog = () => dispatch => {
   dispatch(requestCatalog())
   return axios.get('/catalog')
     .then(response => {
-      dispatch(receiveCatalog(response))
+      if (response.status === 200) {
+        dispatch(receiveCatalog(response))
+      } else {
+        //dispatch(receiveCatalogFailure())
+      }
     })
 }
+
+//{ type: 'FETCH_POSTS_REQUEST' }
+//{ type: 'FETCH_POSTS_FAILURE', error: 'Oops' }
+//{ type: 'FETCH_POSTS_SUCCESS', response: { ... } }
