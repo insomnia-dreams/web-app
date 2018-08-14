@@ -1,33 +1,20 @@
 import React, { Component } from 'react'
-import { connect } from 'react-redux'
-import { fetchCatalog } from "./duck/actions"
+import { BrowserRouter as Router, Route } from 'react-router-dom'
+
+import HomeContainer from "./home/HomeContainer"
+import TestComponent from "./home/TestComponent"
 
 class App extends Component {
   render() {
-    //const { isFetching, categories, lastUpdated } = this.props
     return (
-      <div>
-        {this.props.categories.map(category => (<div key={category.id}>{category.title}</div>))}
-      </div>
+      <Router>
+        <div>
+          <Route exact path="/" component={HomeContainer} />
+          <Route exact path="/test" component={TestComponent} />
+        </div>
+      </Router>
     )
   }
-
-  componentDidMount() {
-    const { dispatch } = this.props
-    dispatch(fetchCatalog())
-  }
 }
-
-const mapStateToProps = state => {
-  const { catalog } = state
-  const { isFetching, categories, lastUpdated } = catalog || { isFetching: true, catalog: [] }
-  return {
-    categories,
-    isFetching,
-    lastUpdated
-  }
-}
-
-App = connect(mapStateToProps)(App)
 
 export default App

@@ -18,8 +18,8 @@ function catalog(state = { isFetching: false, categories: [] }, action) {
   }
 }
 
-const rootReducer = combineReducers({
+const globalReducer = combineReducers({
   catalog
 })
 
-export default rootReducer
+export default globalReducer
