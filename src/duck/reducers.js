@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux'
-import { REQUEST_CATALOG, RECEIVE_CATALOG } from "./actions"
+import { REQUEST_CATALOG, RECEIVE_CATALOG, SET_AUTH_USER } from "./actions"
 
 function catalog(state = { isFetching: false, categories: [] }, action) {
   switch (action.type) {
@@ -18,8 +18,21 @@ function catalog(state = { isFetching: false, categories: [] }, action) {
   }
 }
 
+function session(state = {authUser: null}, action) {
+  switch(action.type) {
+    case SET_AUTH_USER : {
+      return Object.assign({}, state, {
+        authUser: action.authUser
+      })
+    }
+    default: 
+      return state;
+  }
+}
+
 const globalReducer = combineReducers({
-  catalog
+  catalog,
+  session
 })
 
 export default globalReducer

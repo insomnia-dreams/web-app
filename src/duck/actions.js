@@ -31,3 +31,10 @@ export const fetchCatalog = () => dispatch => {
 //{ type: 'FETCH_POSTS_REQUEST' }
 //{ type: 'FETCH_POSTS_FAILURE', error: 'Oops' }
 //{ type: 'FETCH_POSTS_SUCCESS', response: { ... } }
+
+export const SET_AUTH_USER = 'SET_AUTH_USER'
+
+export const setAuthUser = (authUser) => ({
+  type: SET_AUTH_USER,
+  authUser
+})

@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
 import { Link, withRouter } from 'react-router-dom'
-import { auth } from '../firebase'
-import * as routes from '../constants/routes'
 
-const SignUpPage = ({history}) =>
+import * as routes from '../constants/routes'
+import { auth, db } from '../firebase';
+
+const SignUpPage = ({ history }) =>
   (<div>
     <h1>SignUp</h1>
     <SignUpForm history={history} />
@@ -33,8 +34,17 @@ class SignUpForm extends Component {
 
     auth.doCreateUserWithEmailAndPassword(email, passwordOne)
       .then(authUser => {
-        this.setState({ ...INITIAL_STATE });
-        history.push(routes.HOME);
+
+        // Create a user in your own accessible Firebase Database too
+        db.doCreateUser(authUser.user.uid, username, email)
+          .then(() => {
+            this.setState({ ...INITIAL_STATE });
+            history.push(routes.HOME);
+          })
+          .catch(error => {
+            this.setState(byPropKey('error', error));
+          });
+
       })
       .catch(error => {
         this.setState(byPropKey('error', error));
@@ -44,8 +54,11 @@ class SignUpForm extends Component {
   }
 
   render() {
+
     const { username, email, passwordOne, passwordTwo, error } = this.state
-    const isInvalid = passwordOne !== passwordTwo || passwordOne === '' || email === '' || username === ''
+
+    const isInvalid = passwordOne !== passwordTwo || passwordOne === '' || email === '' || !email.includes('@') || username === ''
+
     return (
       <form onSubmit={this.onSubmit}>
         <input
