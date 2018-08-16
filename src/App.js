@@ -3,8 +3,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 
 import HeaderComponent from "./_ui/HeaderComponent"
 
-import HomeContainer from "./home/HomeContainer"
-import LandingPage from './_ui/Landing';
+import LandingContainer from './landing/LandingContainer'
 
 import SignUpPage from './_ui/SignUp';
 import SignInPage from './_ui/SignIn';
@@ -24,8 +23,7 @@ class App extends Component {
         <div>
           <HeaderComponent />
           <hr />
-          <Route exact path={routes.LANDING} component={() => <LandingPage />} />
-          <Route exact path={routes.HOME_CONTAINER} component={() => <HomeContainer />} />
+          <Route exact path={routes.LANDING} component={() => <LandingContainer />} />
           <Route exact path={routes.SIGN_UP} component={() => <SignUpPage />} />
           <Route exact path={routes.SIGN_IN} component={() => <SignInPage />} />
           <Route exact path={routes.PASSWORD_FORGET} component={() => <PasswordForgetPage />} />
