@@ -29,8 +29,11 @@ const HeaderComponent = ({ authUser }) => (
 )
 
 const Header = styled.div`
-  height: 45px;
   display: flex;
+  height: 45px;
+  a:hover {
+    background: ${COLORS.HEADER_HOVER};
+  }
 `
 
 const HeaderComponentNonAuth = () => {
