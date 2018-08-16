@@ -13,11 +13,7 @@ const Background = styled.div`
   background: ${COLORS.HEADER};
 `
 
-const Header = styled.div`
-  a {
-    margin-right: 20px;
-  }
-`
+const Header = styled.div``
 
 const HeaderComponent = ({ authUser }) => (
   <Background>
