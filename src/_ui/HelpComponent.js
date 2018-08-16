@@ -19,7 +19,7 @@ const StyledLink = styled(Link)`
 const HelpComponent = () => {
   return (
     <Wrapper>
-      <StyledLink to={routes.HELP}>Help</StyledLink>
+      <StyledLink to={routes.HELP}>Помощь</StyledLink>
     </Wrapper>
   )
 }

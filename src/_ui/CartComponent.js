@@ -19,7 +19,7 @@ const StyledLink = styled(Link)`
 const CartComponent = () => {
   return (
     <Wrapper>
-      <StyledLink to={routes.CART}>Cart</StyledLink>
+      <StyledLink to={routes.CART}>Корзина</StyledLink>
     </Wrapper>
   )
 }

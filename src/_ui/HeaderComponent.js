@@ -44,7 +44,7 @@ const HeaderComponentNonAuth = () => {
       <HelpComponent />
       <CartComponent />
       <SignInLinkComponent />
-      <SignUpLinkComponent />
+      {/* <SignUpLinkComponent /> */}
     </Header>
   )
 }

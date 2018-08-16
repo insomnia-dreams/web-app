@@ -19,7 +19,7 @@ const StyledLink = styled(Link)`
 const SignInLinkComponent = () => {
   return (
     <Wrapper>
-      <StyledLink to={routes.SIGN_IN}>Sign in</StyledLink>
+      <StyledLink to={routes.SIGN_IN}>Вход</StyledLink>
     </Wrapper>
   )
 }
