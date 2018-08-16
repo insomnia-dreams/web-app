@@ -1,8 +1,11 @@
 import React from 'react'
-import { Link } from "react-router-dom"
+import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
-import styled from "styled-components"
+import styled from 'styled-components'
 
+import LogoComponent from './LogoComponent'
+import InputComponent from './InputComponent'
+import CartComponent from './CartComponent'
 import SignOutButton from './SignOut';
 import * as routes from '../_constants/routes';
 
@@ -13,8 +16,6 @@ const Background = styled.div`
   background: ${COLORS.HEADER};
 `
 
-const Header = styled.div``
-
 const HeaderComponent = ({ authUser }) => (
   <Background>
     <MaxWidthWrapper>
@@ -22,6 +23,28 @@ const HeaderComponent = ({ authUser }) => (
     </MaxWidthWrapper>
   </Background>
 )
+
+const Header = styled.div`
+  height: 45px;
+  display: flex;
+`
+
+const StyledLink = styled(Link)`
+  text-decoration: none;
+`
+
+const HeaderComponentNonAuth = () => {
+  return (
+    <Header>
+      <StyledLink to={routes.LANDING}><LogoComponent /></StyledLink>
+      <InputComponent />
+      <Link to={routes.HELP}>Help</Link>
+      <CartComponent />
+      <Link to={routes.SIGN_IN}>Sign in</Link>
+      <Link to={routes.SIGN_UP}>Sign up</Link>
+    </Header>
+  )
+}
 
 const HeaderComponentAuth = () => {
   return (
@@ -35,15 +58,6 @@ const HeaderComponentAuth = () => {
   )
 }
 
-const HeaderComponentNonAuth = () => {
-  return (
-    <Header>
-      <Link to={routes.LANDING}>Landing</Link>
-      <Link to={routes.SIGN_IN}>Sign in</Link>
-      <Link to={routes.SIGN_UP}>Sign up</Link>
-    </Header>
-  )
-}
 
 const mapStateToProps = state => ({
   authUser: state.global.session.authUser
