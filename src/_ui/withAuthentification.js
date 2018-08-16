@@ -1,8 +1,8 @@
 import React from 'react';
 import { connect } from "react-redux";
-import { firebase } from '../firebase';
+import { firebase } from '../_firebase';
 
-import { setAuthUser } from "../duck/actions";
+import { setAuthUser } from "../_duck/actions";
 
 const withAuthentication = (Component) => {
 

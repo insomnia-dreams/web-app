@@ -1,19 +1,20 @@
 import React, { Component } from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 
-import HeaderComponent from "./common/HeaderComponent"
-import LandingPage from './common/Landing';
+import HeaderComponent from "./_ui/HeaderComponent"
 
-import SignUpPage from './common/SignUp';
-import SignInPage from './common/SignIn';
-import PasswordForgetPage from './common/PasswordForget';
-import HomePage from './common/Home';
-import AccountPage from './common/Account';
-import AdminPage from './common/Admin';
 import HomeContainer from "./home/HomeContainer"
+import LandingPage from './_ui/Landing';
+
+import SignUpPage from './_ui/SignUp';
+import SignInPage from './_ui/SignIn';
+import PasswordForgetPage from './_ui/PasswordForget';
+import HomePage from './_ui/Home';
+import AccountPage from './_ui/Account';
+import AdminPage from './_ui/Admin';
 
 import * as routes from './_constants/routes';
-import withAuthentification from './common/withAuthentification'
+import withAuthentification from './_ui/withAuthentification'
 
 class App extends Component {
   

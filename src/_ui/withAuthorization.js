@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { compose } from 'recompose';
 import { withRouter } from 'react-router-dom';
 
-import { firebase } from '../firebase';
+import { firebase } from '../_firebase';
 import * as routes from '../_constants/routes';
 
 const withAuthorization = (authCondition) => (Component) => {

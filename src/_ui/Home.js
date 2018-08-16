@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
 import withAuthorization from './withAuthorization';
-//import { db } from '../firebase';
 
 class HomePage extends Component {
   constructor(props) {
@@ -13,14 +12,12 @@ class HomePage extends Component {
   }
 
   render() {
-    //const { users } = this.state;
-
+    
     return (
       <div>
         <h1>Home</h1>
         <p>The Home Page is accessible by every signed in user.</p>
 
-        {/* !!users && <UserList users={users} /> */}
       </div>
     );
   }

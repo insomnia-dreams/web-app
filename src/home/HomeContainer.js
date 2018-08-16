@@ -1,7 +1,7 @@
 import { connect } from 'react-redux'
 
 import HomeComponent from "./HomeComponent";
-import { fetchCatalog } from "../duck/actions"
+import { fetchCatalog } from "../_duck/actions"
 
 const mapStateToProps = state => {
   const { catalog } = state.global

@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Link, withRouter } from 'react-router-dom'
 
 import * as routes from '../_constants/routes'
-import { auth, db } from '../firebase';
+import { auth, db } from '../_firebase';
 
 const SignUpPage = ({ history }) =>
   (<div>
