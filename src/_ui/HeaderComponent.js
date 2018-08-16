@@ -5,7 +5,11 @@ import styled from 'styled-components'
 
 import LogoComponent from './LogoComponent'
 import InputComponent from './InputComponent'
+import HelpComponent from './HelpComponent'
 import CartComponent from './CartComponent'
+import SignInLinkComponent from './SignInLinkComponent'
+import SignUpLinkComponent from './SignUpLinkComponent'
+
 import SignOutButton from './SignOut';
 import * as routes from '../_constants/routes';
 
@@ -29,19 +33,15 @@ const Header = styled.div`
   display: flex;
 `
 
-const StyledLink = styled(Link)`
-  text-decoration: none;
-`
-
 const HeaderComponentNonAuth = () => {
   return (
     <Header>
-      <StyledLink to={routes.LANDING}><LogoComponent /></StyledLink>
+      <LogoComponent />
       <InputComponent />
-      <Link to={routes.HELP}>Help</Link>
+      <HelpComponent />
       <CartComponent />
-      <Link to={routes.SIGN_IN}>Sign in</Link>
-      <Link to={routes.SIGN_UP}>Sign up</Link>
+      <SignInLinkComponent />
+      <SignUpLinkComponent />
     </Header>
   )
 }

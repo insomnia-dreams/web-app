@@ -11,13 +11,12 @@ const StyledLink = styled(Link)`
   color: #fff;
 `
 
-const CartComponent = () => {
+const HelpComponent = () => {
   return (
     <Wrapper>
-      <StyledLink to={routes.CART}>Cart</StyledLink>
+      <StyledLink to={routes.HELP}>Help</StyledLink>
     </Wrapper>
   )
 }
 
-export default CartComponent
-
+export default HelpComponent

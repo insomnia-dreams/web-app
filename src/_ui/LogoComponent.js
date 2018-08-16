@@ -1,15 +1,20 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
-const Wrapper = styled.div`
-  color: #fff;
+import * as routes from '../_constants/routes'
+
+const Wrapper = styled.div``
+
+const StyledLink = styled(Link)`
   text-decoration: none;
-` 
+  color: #fff;
+`
 
 const LogoComponent = () => {
   return (
     <Wrapper>
-      Logo
+      <StyledLink to={routes.LANDING}>Logo</StyledLink>
     </Wrapper>
   )
 }
