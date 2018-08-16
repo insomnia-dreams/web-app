@@ -4,11 +4,12 @@ import styled from 'styled-components'
 const CardWrapper = styled.div`
   width: 490px;
   height: 290px;
-  border: 1px solid black;
-  background-image: url("/images/catalog_cards/card1.jpg");
   display: flex;
   justify-content: center;
   align-items: center;
+  background-image: url("/images/catalog_cards/${props => props.url}.jpg");
+  border-radius: 4px;
+  border: 1px solid black;
 `
 /* пробросим прорсы во флекс-базис, чтобы дать побольше места для текста */
 const CardText = styled.span`
@@ -19,9 +20,9 @@ const CardText = styled.span`
 `
 
 const CatalogCardComponent = ({ category }) => {
-  const { id, title } = category
+  const { id, title, img_url } = category
   return (
-    <CardWrapper>
+    <CardWrapper url={img_url}>
       <CardText id={id}>
         {title}
       </CardText>

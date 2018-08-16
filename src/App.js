@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
+import styled, {injectGlobal} from 'styled-components'
 
 import HeaderComponent from "./_ui/HeaderComponent"
 
@@ -15,12 +16,19 @@ import AdminPage from './_ui/Admin';
 import * as routes from './_constants/routes';
 import withAuthentification from './_ui/withAuthentification'
 
+import { COLORS } from './_constants/styles'
+
+const Background = styled.div`
+  background: ${COLORS.BACKGROUND};
+`
+
 class App extends Component {
   
   render() {
     return (
       <Router>
-        <div>
+        <Background>
+
           <HeaderComponent />
           <hr />
           <Route exact path={routes.LANDING} component={() => <LandingContainer />} />
@@ -30,10 +38,17 @@ class App extends Component {
           <Route exact path={routes.HOME} component={() => <HomePage />} />
           <Route exact path={routes.ACCOUNT} component={() => <AccountPage />} />
           <Route exact path={routes.ADMIN} component={() => <AdminPage />} />
-        </div>
+        </Background>
       </Router>
     )
   }
 }
+
+injectGlobal`
+  body, html {
+    margin: 0;
+    padding: 0;
+  }
+`
 
 export default withAuthentification(App)

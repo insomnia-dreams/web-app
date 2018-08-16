@@ -6,16 +6,25 @@ import styled from "styled-components"
 import SignOutButton from './SignOut';
 import * as routes from '../_constants/routes';
 
+import MaxWidthWrapper from '../_ui/MaxWidthWrapper'
+import { COLORS } from '../_constants/styles'
+
+const Background = styled.div`
+  background: ${COLORS.HEADER};
+`
+
 const Header = styled.div`
   a {
     margin-right: 20px;
   }
 `
 
-const HeaderComponent = ({ authUser }) =>(
-  <div>
-    {authUser ? <HeaderComponentAuth /> : <HeaderComponentNonAuth />}
-  </div>
+const HeaderComponent = ({ authUser }) => (
+  <Background>
+    <MaxWidthWrapper>
+      {authUser ? <HeaderComponentAuth /> : <HeaderComponentNonAuth />}
+    </MaxWidthWrapper>
+  </Background>
 )
 
 const HeaderComponentAuth = () => {
