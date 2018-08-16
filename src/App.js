@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 import styled, {injectGlobal} from 'styled-components'
 
 import HeaderComponent from "./_ui/HeaderComponent"
+import FooterComponent from './_ui/FooterComponent'
 
 import LandingContainer from './landing/LandingContainer'
 
@@ -37,7 +38,7 @@ class App extends Component {
           <Route exact path={routes.HOME} component={() => <HomePage />} />
           <Route exact path={routes.ACCOUNT} component={() => <AccountPage />} />
           <Route exact path={routes.ADMIN} component={() => <AdminPage />} />
-          {/* FooterComponent */}
+          <FooterComponent />
         </Background>
       </Router>
     )
