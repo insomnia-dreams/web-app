@@ -1,39 +1,31 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const Wrapper = styled.div`
+const CardWrapper = styled.div`
   width: 490px;
   height: 290px;
   border: 1px solid black;
-  position: relative;
+  background-image: url("/images/catalog_cards/card1.jpg");
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `
-
-const Image = styled.img`
-  width: 100%;
-  height: 100%;
-`
-
-const Span = styled.span`
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  font-family: 'Source Sans Pro', sans-serif;
-  font-size: 25px;
+/* пробросим прорсы во флекс-базис, чтобы дать побольше места для текста */
+const CardText = styled.span`
+  flex-basis: ${props => props.id !== 7 ? '40%' : '60%'};
+  text-align: center; 
+  font: 600 25px 'Source Sans Pro', sans-serif;
   color: #fff;
-  font-weight: 600;
 `
 
 const CatalogCardComponent = ({ category }) => {
-  const { title } = category
+  const { id, title } = category
   return (
-    <Wrapper>
-      <Span>
+    <CardWrapper>
+      <CardText id={id}>
         {title}
-      </Span>
-      <Image src="/images/catalog_cards/card1.jpg" alt="catalog card image" />
-    </Wrapper>
+      </CardText>
+    </CardWrapper>
   )
 }
 
