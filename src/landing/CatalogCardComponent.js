@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 const CardWrapper = styled.div`
-  width: 490px;
+  width: 467px;
   height: 290px;
   display: flex;
   justify-content: center;
@@ -10,6 +10,7 @@ const CardWrapper = styled.div`
   background-image: url("/images/catalog_cards/${props => props.url}.jpg");
   border-radius: 4px;
   border: 1px solid black;
+  margin: 0  0 2.5px;
 `
 /* пробросим прорсы во флекс-базис, чтобы дать побольше места для текста */
 const CardText = styled.span`

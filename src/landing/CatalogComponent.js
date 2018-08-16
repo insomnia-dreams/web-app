@@ -1,6 +1,15 @@
 import React, { Component } from 'react'
+import styled from 'styled-components'
 
 import CatalogCardComponent from "./CatalogCardComponent"
+
+const Wrapper = styled.div`
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+`
 
 class CatalogComponent extends Component {
   componentDidMount() {
@@ -11,13 +20,13 @@ class CatalogComponent extends Component {
   render() {
     const { isFetching, catalog, lastUpdated } = this.props
     return (
-      <div>
+      <Wrapper>
          {isFetching && <span>Loading...</span>}
          {(!isFetching && lastUpdated) && 
           catalog.map(category => (
             <CatalogCardComponent key={category.id} category={category}/>
           ))}
-      </div>
+      </Wrapper>
     )
   }
 }
