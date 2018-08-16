@@ -28,7 +28,6 @@ class App extends Component {
     return (
       <Router>
         <Background>
-
           <HeaderComponent />
           <hr />
           <Route exact path={routes.LANDING} component={() => <LandingContainer />} />
@@ -38,6 +37,7 @@ class App extends Component {
           <Route exact path={routes.HOME} component={() => <HomePage />} />
           <Route exact path={routes.ACCOUNT} component={() => <AccountPage />} />
           <Route exact path={routes.ADMIN} component={() => <AdminPage />} />
+          {/* FooterComponent */}
         </Background>
       </Router>
     )

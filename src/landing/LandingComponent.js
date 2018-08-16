@@ -1,8 +1,11 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 
-import CatalogContainer from "./CatalogContainer"
 import MaxWidthWrapper from '../_ui/MaxWidthWrapper'
+import CatalogContainer from "./CatalogContainer"
+import BannerBoxComponent from './BannerBoxComponent'
+import BannerRowComponent from './BannerRowComponent'
+import ExcellenceComponent from './ExcellenceComponent'
 
 const Wrapper = styled.div`
   display: flex;
@@ -34,6 +37,9 @@ class LandingComponent extends Component {
         <Wrapper>
           <LeftSidebar></LeftSidebar>
           <Content>
+            <BannerBoxComponent />
+            <BannerRowComponent />
+            <ExcellenceComponent />
             <CatalogContainer />
           </Content>
           <RightSidebar></RightSidebar>
