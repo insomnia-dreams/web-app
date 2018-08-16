@@ -19,6 +19,10 @@ const Span = styled.span`
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 25px;
+  color: #fff;
+  font-weight: 600;
 `
 
 const CatalogCardComponent = ({ category }) => {
