@@ -1,10 +1,8 @@
 import React from 'react';
 import { connect } from "react-redux";
 import { firebase } from '../firebase';
-import AuthUserContext from './AuthUserContext';
 
 import { setAuthUser } from "../duck/actions";
-
 
 const withAuthentication = (Component) => {
 

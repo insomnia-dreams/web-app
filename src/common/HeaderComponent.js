@@ -4,7 +4,7 @@ import styled from "styled-components"
 import { connect } from 'react-redux'
 
 import SignOutButton from './SignOut';
-import * as routes from '../constants/routes';
+import * as routes from '../_constants/routes';
 //import AuthUserContext from './AuthUserContext';
 
 const Header = styled.div`
