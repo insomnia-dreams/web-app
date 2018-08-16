@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux'
 import { REQUEST_CATALOG, RECEIVE_CATALOG, SET_AUTH_USER } from "./actions"
 
-function catalog(state = { isFetching: false, categories: [] }, action) {
+function catalog(state = { isFetching: false, catalog: [] }, action) {
   switch (action.type) {
     case REQUEST_CATALOG:
       return Object.assign({}, state, {
@@ -10,7 +10,7 @@ function catalog(state = { isFetching: false, categories: [] }, action) {
     case RECEIVE_CATALOG:
       return Object.assign({}, state, {
         isFetching: false,
-        categories: action.categories,
+        catalog: action.catalog,
         lastUpdated: action.receivedAt
       })
     default:

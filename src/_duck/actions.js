@@ -10,7 +10,7 @@ export const RECEIVE_CATALOG = 'RECEIVE_CATALOG'
 
 const receiveCatalog = json => ({
   type: RECEIVE_CATALOG,
-  categories: json.data,
+  catalog: json.data,
   receivedAt: Date.now()
 })
 
