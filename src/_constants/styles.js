@@ -4,6 +4,7 @@ export const COLORS = {
   HEADER_HOVER: '#de142b',
   PLACEHOLDER: 'rgb(153, 153, 153)',
   FOOTER_HEADER: '#333',
+  SIDE_NAV_LINK: '#555'
 }
 
 

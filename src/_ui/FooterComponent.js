@@ -6,10 +6,6 @@ import * as routes from '../_constants/routes'
 import MaxWidthWrapper from '../_ui/MaxWidthWrapper'
 import { COLORS } from '../_constants/styles'
 
-const Background = styled.div`
-  background: ${COLORS.HEADER};
-`
-
 const FlexWrapper = styled.div`
   display: flex;
   border: 1px solid black;

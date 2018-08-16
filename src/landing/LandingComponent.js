@@ -6,6 +6,7 @@ import CatalogContainer from "./CatalogContainer"
 import BannerBoxComponent from './BannerBoxComponent'
 import BannerRowComponent from './BannerRowComponent'
 import ExcellenceComponent from './ExcellenceComponent'
+import SideNavigationContainer from '../_ui/SideNavigationContainer'
 
 const Wrapper = styled.div`
   display: flex;
@@ -35,7 +36,9 @@ class LandingComponent extends Component {
     return (
       <MaxWidthWrapper>
         <Wrapper>
-          <LeftSidebar></LeftSidebar>
+          <LeftSidebar>
+            <SideNavigationContainer />
+          </LeftSidebar>
           <Content>
             <BannerBoxComponent />
             <BannerRowComponent />
