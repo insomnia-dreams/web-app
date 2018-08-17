@@ -1,12 +1,60 @@
 {
   "catalog": [
-    { "id": 1, "title": "Бытовая химия для дома", "path": "1", "img_url": "card1", "link": "/stub" },
-    { "id": 2, "title": "Профессиональная бытовая химия", "path": "1", "img_url": "card2", "link": "/stub" },
-    { "id": 3, "title": "Бумажная продукция", "path": "1", "img_url": "card1", "link": "/stub" },
-    { "id": 4, "title": "Канцелярские товары", "path": "1", "img_url": "card2", "link": "/stub" },
-    { "id": 5, "title": "Одноразовая посуда", "path": "1", "img_url": "card1", "link": "/stub" },
-    { "id": 6, "title": "Украшения для стола", "path": "1", "img_url": "card2", "link": "/stub" },
-    { "id": 7, "title": "Упаковочные материалы и полиэтиленовые пакеты", "path": "1", "img_url": "card1", "link": "/stub" },
-    { "id": 8, "title": "Хозяйственные товары для дома", "path": "1", "img_url": "card2", "link": "/stub" }
+    {
+      "id": 1,
+      "title": "Бытовая химия для дома",
+      "name": "household-chemicals",
+      "path": "1",
+      "link": "/household-chemicals"
+    },
+    {
+      "id": 2,
+      "title": "Профессиональная бытовая химия",
+      "name": "professional-household-chemicals",
+      "path": "1",
+      "link": "/professional-household-chemicals"
+    },
+    {
+      "id": 3,
+      "title": "Бумажная продукция",
+      "name": "professional-household-chemicals",
+      "path": "1",
+      "link": "/paper-products"
+    },
+    {
+      "id": 4,
+      "title": "Канцелярские товары",
+      "name": "stationery",
+      "path": "1",
+      "link": "/stationery"
+    },
+    {
+      "id": 5,
+      "title": "Одноразовая посуда",
+      "name": "disposable-tableware",
+      "path": "1",
+      "link": "/disposable-tableware"
+    },
+    {
+      "id": 6,
+      "title": "Украшения для стола",
+      "name": "table-decorations",
+      "path": "1",
+      "link": "/stationery"
+    },
+    {
+      "id": 7,
+      "title": "Упаковочные материалы и полиэтиленовые пакеты",
+      "name": "packing-materials-and-bags",
+      "path": "1",
+      "link": "/packing-materials-and-bags"
+    },
+    {
+      "id": 8,
+      "title": "Хозяйственные товары для дома",
+      "name": "household-goods",
+      "path": "1",
+      "link": "/household-goods"
+    }
   ]
 }

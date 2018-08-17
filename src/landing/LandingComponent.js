@@ -14,13 +14,13 @@ const Wrapper = styled.div`
 `
 
 const LeftSidebar = styled.aside`
-  flex-basis: 14%;
+  flex-basis: 13%;
   border: 1px solid goldenrod;
   flex-shrink: 0;
 `
 
 const RightSidebar = styled.aside`
-  flex-basis: 18%;
+  flex-basis: 19%;
   border: 1px solid blue;
   flex-shrink: 0;
 `
