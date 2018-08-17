@@ -1,17 +1,16 @@
 import React from 'react';
 
-import AuthUserContext from './AuthUserContext';
 import withAuthorization from "./withAuthorization";
 
 const AdminPage = () =>
-  <AuthUserContext.Consumer>
+  <div>
     {authUser =>
       <div>
         <h1>Admin</h1>
         <p>Restricted area! Only users with the admin rule are authorized.</p>
       </div>
     }
-  </AuthUserContext.Consumer>
+  </div>
 
 const authCondition = (authUser) => !!authUser && authUser.role === 'ADMIN';
 

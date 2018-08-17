@@ -11,7 +11,8 @@ const Wrapper = styled.div`
 `
 
 const LinkWrapper = styled.div`
-  margin-bottom: 20px;
+  padding-right: 25px;
+  padding-bottom: 20px;
 `
 
 const StyledLink = styled(Link)`
@@ -39,35 +40,18 @@ class SideNavigationContainer extends Component {
     super(props)
     this.state = {
       isOpen: false,
-      currentLink: ''
+      name: ''
     }
     this.dropDown = React.createRef()
     this.sideNav = React.createRef()
-  }  
-  
-  clickHandler = (e, title) => {
-    console.log(title)
-    console.log(this.state.currentLink)
-    if (this.state.currentLink === title) {
-      this.setState({isOpen: false, title: ''})
-    } else {
-      this.setState({isOpen: true, currentLink: title})
-      e.preventDefault()
-    }
   }
 
-  handleClickOutside = (event) => {
-    if (event.target !== this.dropDown) {
-      this.setState({isOpen: false})
-    }
+  showSideNavigation = (e, name) => {
+    this.setState({ isOpen: true, name })
   }
 
-  componentDidMount() {
-    document.addEventListener('mousedown', this.handleClickOutside);
-  }
-
-  componentWillUnmount() {
-    document.removeEventListener('mousedown', this.handleClickOutside);
+  hideSideNavigation = (e) => {
+    this.setState({ isOpen: false, name: '' })
   }
 
   render() {
@@ -75,17 +59,20 @@ class SideNavigationContainer extends Component {
     return (
       <Wrapper innerRef={comp => this.sideNav = comp}>
         {catalog.length && catalog.map(category => (
-          <LinkWrapper key={category.id}>
-            <StyledLink to={category.link} onClick={(e) => this.clickHandler(e, category.title)}>
-              {category.title}
-            </StyledLink>
+          <LinkWrapper
+            key={category.id}
+            onMouseEnter={(e) => this.showSideNavigation(e, category.name)}
+            onMouseLeave={this.hideSideNavigation}
+          >
+            <StyledLink to={category.link}>{category.title}</StyledLink>
+            {this.state.isOpen ?
+              <DropDown
+                innerRef={comp => this.dropDown = comp}
+                leftOffset={this.sideNav.offsetWidth}
+              >{this.state.name}</DropDown>
+              : null}
           </LinkWrapper>
         ))}
-        {this.state.isOpen ? 
-          <DropDown 
-            innerRef={comp => this.dropDown = comp} 
-            leftOffset={this.sideNav.offsetWidth}/> 
-        : null}
       </Wrapper>
     )
   }

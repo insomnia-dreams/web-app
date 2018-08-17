@@ -14,7 +14,7 @@ const Wrapper = styled.div`
 `
 
 const LeftSidebar = styled.aside`
-  flex-basis: 13%;
+  flex-basis: 15%;
   border: 1px solid goldenrod;
   flex-shrink: 0;
 `

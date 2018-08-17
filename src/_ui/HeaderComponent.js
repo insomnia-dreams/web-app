@@ -8,7 +8,6 @@ import InputComponent from './InputComponent'
 import HelpComponent from './HelpComponent'
 import CartComponent from './CartComponent'
 import SignInLinkComponent from './SignInLinkComponent'
-//import SignUpLinkComponent from './SignUpLinkComponent'
 
 import SignOutButton from './SignOut';
 import * as routes from '../_constants/routes';
@@ -44,7 +43,6 @@ const HeaderComponentNonAuth = () => {
       <HelpComponent />
       <CartComponent />
       <SignInLinkComponent />
-      {/* <SignUpLinkComponent /> */}
     </Header>
   )
 }
