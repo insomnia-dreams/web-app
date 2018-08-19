@@ -5,12 +5,14 @@ import MaxWidthWrapper from '../_ui/MaxWidthWrapper'
 import CatalogContainer from "./CatalogContainer"
 import BannerBoxComponent from './BannerBoxComponent'
 import BannerRowComponent from './BannerRowComponent'
+import BannerSideComponent from './BannerSideComponent'
 import ExcellenceComponent from './ExcellenceComponent'
 import SideNavigationContainer from '../_ui/SideNavigationContainer'
 
 const Wrapper = styled.div`
   display: flex;
   width: 100%;
+  padding-right: 10px;
 `
 
 const LeftSidebar = styled.aside`
@@ -20,13 +22,13 @@ const LeftSidebar = styled.aside`
 `
 
 const RightSidebar = styled.aside`
-  flex-basis: 19%;
-  border: 1px solid blue;
+  flex-basis: 17%;
+  border: 1px solid goldenrod;
   flex-shrink: 0;
 `
 
 const Content = styled.section`
-  flex-basis: 68%;
+  flex-basis: 69%;
   border: 1px solid red;
   flex-shrink: 0;
 `
@@ -45,7 +47,10 @@ class LandingComponent extends Component {
             <ExcellenceComponent />
             <CatalogContainer />
           </Content>
-          <RightSidebar></RightSidebar>
+          <RightSidebar>
+            <BannerSideComponent />
+            <BannerSideComponent />
+          </RightSidebar>
         </Wrapper>
       </MaxWidthWrapper>
     )
