@@ -256,36 +256,36 @@
       "id": 37,
       "title": "Бумага для заметок",
       "name": "paper-for-notes",
-      "path": "3.1",
-      "link": "/paper-products/paper-for-notes"
+      "path": "4.1",
+      "link": "/stationery/paper-for-notes"
     },
     {
       "id": 38,
       "title": "Маркеры и текстовыделители",
       "name": "markers-and-text-highlighters",
-      "path": "3.2",
-      "link": "/paper-products/markers-and-text-highlighters"
+      "path": "4.2",
+      "link": "/stationery/markers-and-text-highlighters"
     },
     {
       "id": 39,
       "title": "Банковская резинка",
       "name": "bank rub",
-      "path": "3.3",
-      "link": "/paper-products/bank rub"
+      "path": "4.3",
+      "link": "/stationery/bank rub"
     },
     {
       "id": 40,
       "title": "Ручки",
       "name": "pens",
-      "path": "3.4",
-      "link": "/paper-products/pens"
+      "path": "4.4",
+      "link": "/stationery/pens"
     },
     {
       "id": 41,
       "title": "Файлы-вкладыши",
       "name": "files-liners",
-      "path": "3.5",
-      "link": "/paper-products/files-liners"
+      "path": "4.5",
+      "link": "/stationery/files-liners"
     },
     {
       "id": 42,

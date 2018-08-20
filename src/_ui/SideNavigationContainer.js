@@ -6,13 +6,12 @@ import SideNavigationComponent from './SideNavigationComponent'
 class SideNavigationContainer extends Component {
 
   render() {
-    let { catalog, isFetching } = this.props
+    const { catalog } = this.props
 
-    if (catalog.length && !isFetching) {
-      catalog = catalog.filter(category => category.path.length === 1)
-    }
+    const fullCatalog = catalog
+    const shortCatalog = catalog.filter(category => category.path.length === 1)
 
-    return <SideNavigationComponent catalog={catalog} />
+    return <SideNavigationComponent fullCatalog={fullCatalog} shortCatalog={shortCatalog} />
   }
 }
 

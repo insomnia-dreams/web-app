@@ -10,12 +10,23 @@ const DropDown = styled.div`
   left: ${props => props.leftOffset}px;
   `
 
+const SubCategoryWrapper = styled.div`
+  display: inline-block;
+`
+
 class DropDownComponent extends Component {
   render() {
-    const { leftOffset, title } = this.props
+    const { leftOffset, title, subCategories } = this.props
     return (
       <DropDown leftOffset={leftOffset}>
         {title}
+        <div>
+          {subCategories.map(subCategory => (
+            <SubCategoryWrapper key={subCategory.id}>
+              {subCategory.title}
+            </SubCategoryWrapper>)
+          )}
+        </div>
       </DropDown>
     )
   }

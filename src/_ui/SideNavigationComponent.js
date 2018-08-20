@@ -38,17 +38,25 @@ class SideNavigationComponent extends Component {
 
   showSideNavigation = (e, categoryId) => {
     this.setState({ isOpen: true, categoryId })
+    this.findSubCategories(categoryId)
   }
 
   hideSideNavigation = (e) => {
     this.setState({ isOpen: false, categoryId: '' })
   }
 
+  findSubCategories = (categoryId) => {
+    const { shortCatalog, fullCatalog } = this.props
+    const categoryPath = shortCatalog.filter(category => category.id === categoryId)[0].path
+    const subCategories = fullCatalog.filter(category => category.path.includes(`${categoryPath}.`))
+    return subCategories
+  }
+
   render() {
-    const { catalog } = this.props
+    const { shortCatalog } = this.props
     return (
       <Wrapper innerRef={comp => this.sideNavigation = comp}>
-        {catalog.map(category => (
+        {shortCatalog.map(category => (
           <LinkWrapper
             key={category.id}
             onMouseEnter={(e) => this.showSideNavigation(e, category.id)}
@@ -56,7 +64,11 @@ class SideNavigationComponent extends Component {
           >
             <StyledLink to={category.link}>{category.title}</StyledLink>
             {this.state.isOpen && this.state.categoryId === category.id ?
-              <DropDownComponent leftOffset={this.sideNavigation.offsetWidth} title={category.title} />
+              <DropDownComponent 
+                leftOffset={this.sideNavigation.offsetWidth} 
+                title={category.title} 
+                subCategories={this.findSubCategories(category.id)}
+              />
               : null}
           </LinkWrapper>
         ))}
