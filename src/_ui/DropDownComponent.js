@@ -15,6 +15,7 @@ const DropDown = styled.div`
   `
 
 const CategoryTitleWrapper = styled.div`
+  height: 10%;
   margin: 0 20px;
   padding: 15px 0;
 `
@@ -36,7 +37,7 @@ const SubCategoriesWrapper = styled.div`
   flex-direction: column;
   flex-wrap: wrap;
   width: 100%;
-  height: 100%;
+  height: 90%;
 `
 
 const SubCategoryLinkWrapper = styled.div`
