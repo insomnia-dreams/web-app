@@ -30,18 +30,22 @@ function session(state = { authUser: null }, action) {
   }
 }
 
-function UserInterface(state = { sideNavigation: { isOpen: false, categoriId: '' } }, action) {
+function userInterface(state = { sideNavigation: { isOpen: false, categoryId: '' } }, action) {
   switch (action.type) {
     case OPEN_SIDENAVIGATION: {
       return Object.assign({}, state, {
-        isOpen: true,
-        categoriId: action.categoriId
+        sideNavigation: {
+          isOpen: true,
+          categoryId: action.categoryId
+        }
       })
     }
     case CLOSE_SIDENAVIGATION: {
       return Object.assign({}, state, {
-        isOpen: false,
-        categoriId: ''
+        sideNavigation: {
+          isOpen: false,
+          categoryId: ''
+        }
       })
     }
     default:
@@ -51,7 +55,8 @@ function UserInterface(state = { sideNavigation: { isOpen: false, categoriId: ''
 
 const globalReducer = combineReducers({
   catalog,
-  session
+  session,
+  userInterface
 })
 
 export default globalReducer

@@ -41,20 +41,24 @@ const StyledLink = styled(Link)`
 class SideNavigationComponent extends Component {
   constructor(props) {
     super(props)
-    this.state = {
+    /* this.state = {
       isOpen: false,
       categoryId: ''
-    }
+    } */
     this.sideNavigation = React.createRef()
   }
 
   showSideNavigation = (e, categoryId) => {
-    this.setState({ isOpen: true, categoryId })
+    const { openSideNavigation } = this.props
+    //this.setState({ isOpen: true, categoryId })
+    openSideNavigation(categoryId)
     this.findSubCategories(categoryId)
   }
 
   hideSideNavigation = (e) => {
-    this.setState({ isOpen: false, categoryId: '' })
+    const { closeSideNavigation } = this.props
+    //this.setState({ isOpen: false, categoryId: '' })
+    closeSideNavigation()
   }
 
   findSubCategories = (categoryId) => {
@@ -66,6 +70,8 @@ class SideNavigationComponent extends Component {
 
   render() {
     const { shortCatalog } = this.props
+    const { sideNavigation } = this.props
+    
     return (
       <Wrapper innerRef={comp => this.sideNavigation = comp}>
         {shortCatalog.map(category => (
@@ -75,10 +81,10 @@ class SideNavigationComponent extends Component {
             onMouseLeave={this.hideSideNavigation}
           >
             <StyledLink to={category.link}>{category.title}</StyledLink>
-            {this.state.isOpen && this.state.categoryId === category.id ?
-              <DropDownComponent 
-                leftOffset={this.sideNavigation.offsetWidth} 
-                category={category} 
+            {sideNavigation.isOpen && Number(sideNavigation.categoryId) === Number(category.id) ?
+              <DropDownComponent
+                leftOffset={this.sideNavigation.offsetWidth}
+                category={category}
                 subCategories={this.findSubCategories(category.id)}
               />
               : null}
