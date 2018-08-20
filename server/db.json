@@ -17,7 +17,7 @@
     {
       "id": 3,
       "title": "Бумажная продукция",
-      "name": "professional-household-chemicals",
+      "name": "paper-products",
       "path": "3",
       "link": "/paper-products"
     },
@@ -234,9 +234,9 @@
     {
       "id": 34,
       "title": "Таблетки для унитаза",
-      "name": "еablets-for-toilet",
+      "name": "tablets-for-toilet",
       "path": "1.19",
-      "link": "/household-chemicals/еablets-for-toilet"
+      "link": "/household-chemicals/tablets-for-toilet"
     },
     {
       "id": 35,
@@ -360,7 +360,7 @@
     {
       "id": 52,
       "title": "Тарелки",
-      "name": "soap",
+      "name": "dishes",
       "path": "5.11",
       "link": "/disposable-tableware/dishes"
     },
@@ -444,16 +444,16 @@
     {
       "id": 64,
       "title": "Пакеты с вырубной ручкой",
-      "name": "packages-with-a-cutting-handle",
+      "name": "packages-with-cutting-handle",
       "path": "7.7",
-      "link": "/packing-materials-and-bags/packages-with-a-cutting-handle"
+      "link": "/packing-materials-and-bags/packages-with-cutting-handle"
     },
     {
       "id": 65,
       "title": "Пакеты с петлевой ручкой",
-      "name": "зackages-with-loop-handle",
+      "name": "packages-with-loop-handle",
       "path": "7.8",
-      "link": "/packing-materials-and-bags/зackages-with-loop-handle"
+      "link": "/packing-materials-and-bags/packages-with-loop-handle"
     },
     {
       "id": 66,
