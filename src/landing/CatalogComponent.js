@@ -21,11 +21,12 @@ class CatalogComponent extends Component {
     const { isFetching, catalog, lastUpdated } = this.props
     return (
       <Wrapper>
-         {isFetching && <span>Loading...</span>}
-         {(!isFetching && lastUpdated) && 
-          catalog.map(category => (
-            <CatalogCardComponent key={category.id} category={category}/>
-          ))}
+        {isFetching && <span>Loading...</span>}
+        {(!isFetching && lastUpdated) &&
+          catalog.filter(category => category.path.length === 1)
+            .map(category => (
+              <CatalogCardComponent key={category.id} category={category} />
+            ))}
       </Wrapper>
     )
   }
