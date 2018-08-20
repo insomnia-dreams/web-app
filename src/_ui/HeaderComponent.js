@@ -30,6 +30,7 @@ const HeaderComponent = ({ authUser }) => (
 const Header = styled.div`
   display: flex;
   height: 45px;
+  margin-bottom: 7px;
   a:hover {
     background: ${COLORS.HEADER_HOVER};
   }

@@ -13,6 +13,18 @@ const Wrapper = styled.div`
 const LinkWrapper = styled.div`
   padding-right: 25px;
   padding-bottom: 20px;
+  &::before {
+    position: absolute;
+    right: 12px;
+    content: "";
+    padding: 3px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-left: 0;
+    border-top: 0;
+    margin-top: 7px;
+    transform: rotate(-45deg);
+  }
 `
 
 const StyledLink = styled(Link)`

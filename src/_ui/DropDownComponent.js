@@ -13,10 +13,12 @@ const DropDown = styled.div`
   border-radius: 3px;
   box-shadow: 0 1px 5px rgba(0,0,0,.3);
   `
+
 const CategoryTitleWrapper = styled.div`
   margin: 0 20px;
   padding: 15px 0;
 `
+
 const CategoryLink = styled(Link)`
   font-family: 'Source Sans Pro',sans-serif;
   font-weight: 200;
