@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
+import { openSideNavigation, closeSideNavigation } from '../_duck/actions'
 import SideNavigationComponent from './SideNavigationComponent'
 
 class SideNavigationContainer extends Component {
@@ -24,4 +25,13 @@ const mapStateToProps = state => {
   }
 }
 
-export default connect(mapStateToProps)(SideNavigationContainer)
+const mapDispatchToProps = dispatch => {
+  openSideNavigation: (categoryId) => {
+    dispatch(openSideNavigation(categoryId))
+  }
+  closeSideNavigation: () => {
+    dispatch(closeSideNavigation())
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(SideNavigationContainer)

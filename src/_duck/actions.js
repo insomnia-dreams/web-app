@@ -36,3 +36,16 @@ export const setAuthUser = (authUser) => ({
   type: SET_AUTH_USER,
   authUser
 })
+
+export const OPEN_SIDENAVIGATION = 'OPEN_SIDENAVIGATION'
+
+export const openSideNavigation = (categoryId) => ({
+  type: OPEN_SIDENAVIGATION,
+  categoryId
+})
+
+export const CLOSE_SIDENAVIGATION = 'CLOSE_SIDENAVIGATION'
+
+export const closeSideNavigation = () => ({
+  type: CLOSE_SIDENAVIGATION
+})
