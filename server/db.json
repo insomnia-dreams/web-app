@@ -11,50 +11,652 @@
       "id": 2,
       "title": "Профессиональная бытовая химия",
       "name": "professional-household-chemicals",
-      "path": "1",
+      "path": "2",
       "link": "/professional-household-chemicals"
     },
     {
       "id": 3,
       "title": "Бумажная продукция",
       "name": "professional-household-chemicals",
-      "path": "1",
+      "path": "3",
       "link": "/paper-products"
     },
     {
       "id": 4,
       "title": "Канцелярские товары",
       "name": "stationery",
-      "path": "1",
+      "path": "4",
       "link": "/stationery"
     },
     {
       "id": 5,
       "title": "Одноразовая посуда",
       "name": "disposable-tableware",
-      "path": "1",
+      "path": "5",
       "link": "/disposable-tableware"
     },
     {
       "id": 6,
       "title": "Украшения для стола",
       "name": "table-decorations",
-      "path": "1",
-      "link": "/stationery"
+      "path": "6",
+      "link": "/table-decorations"
     },
     {
       "id": 7,
       "title": "Упаковочные материалы и полиэтиленовые пакеты",
       "name": "packing-materials-and-bags",
-      "path": "1",
+      "path": "7",
       "link": "/packing-materials-and-bags"
     },
     {
       "id": 8,
       "title": "Хозяйственные товары для дома",
       "name": "household-goods",
-      "path": "1",
+      "path": "8",
       "link": "/household-goods"
+    },
+    {
+      "id": 9,
+      "title": "Бланки",
+      "name": "blanks",
+      "path": "3.1",
+      "link": "/paper-products/blanks"
+    },
+    {
+      "id": 10,
+      "title": "Бумага для офисной техники",
+      "name": "office-paper",
+      "path": "3.2",
+      "link": "/paper-products/office-paper"
+    },
+    {
+      "id": 11,
+      "title": "Бумажные полотенца и платочки",
+      "name": "paper-towels-and-handkerchiefs",
+      "path": "3.3",
+      "link": "/paper-products/paper-towels-and-handkerchiefs"
+    },
+    {
+      "id": 12,
+      "title": "Салфетки бумажные",
+      "name": "paper-napkins",
+      "path": "3.4",
+      "link": "/paper-products/paper-napkins"
+    },
+    {
+      "id": 13,
+      "title": "Туалетная бумага",
+      "name": "toilet-paper",
+      "path": "3.5",
+      "link": "/paper-products/toilet-paper"
+    },
+    {
+      "id": 14,
+      "title": "Ценники",
+      "name": "price-lists",
+      "path": "3.6",
+      "link": "/paper-products/price-lists"
+    },
+    {
+      "id": 15,
+      "title": "Чековая лента",
+      "name": "check-tape",
+      "path": "3.7",
+      "link": "/paper-products/check-tape"
+    },
+    {
+      "id": 16,
+      "title": "Антистатик",
+      "name": "antistatic",
+      "path": "1.1",
+      "link": "/household-chemicals/antistatic"
+    },
+    {
+      "id": 17,
+      "title": "Дезинфицирующие средства",
+      "name": "disinfectants",
+      "path": "1.2",
+      "link": "/household-chemicals/disinfectants"
+    },
+    {
+      "id": 18,
+      "title": "Дезодорант",
+      "name": "deodorant",
+      "path": "1.3",
+      "link": "/household-chemicals/deodorant"
+    },
+    {
+      "id": 19,
+      "title": "Жидкое мыло",
+      "name": "liquid-soap",
+      "path": "1.4",
+      "link": "/household-chemicals/liquid-soap"
+    },
+    {
+      "id": 20,
+      "title": "Зубная паста",
+      "name": "toothpaste",
+      "path": "1.5",
+      "link": "/household-chemicals/toothpaste"
+    },
+    {
+      "id": 21,
+      "title": "Зубные щетки",
+      "name": "toothbrushes",
+      "path": "1.6",
+      "link": "/household-chemicals/toothbrushes"
+    },
+    {
+      "id": 22,
+      "title": "Инсектицидные средства",
+      "name": "insecticides",
+      "path": "1.7",
+      "link": "/household-chemicals/insecticides"
+    },
+    {
+      "id": 23,
+      "title": "Кондиционер для белья",
+      "name": "fabric-softener",
+      "path": "1.8",
+      "link": "/household-chemicals/fabric-softener"
+    },
+    {
+      "id": 24,
+      "title": "Лак и гель для волос",
+      "name": "hair-lacquer-and-gel",
+      "path": "1.9",
+      "link": "/household-chemicals/hair-lacquer-and-gel"
+    },
+    {
+      "id": 25,
+      "title": "Моющие средства",
+      "name": "detergents",
+      "path": "1.10",
+      "link": "/household-chemicals/detergents"
+    },
+    {
+      "id": 26,
+      "title": "Мыло",
+      "name": "soap",
+      "path": "1.11",
+      "link": "/household-chemicals/soap"
+    },
+    {
+      "id": 27,
+      "title": "Освежитель воздуха",
+      "name": "air-freshener",
+      "path": "1.12",
+      "link": "/household-chemicals/air-freshener"
+    },
+    {
+      "id": 28,
+      "title": "Отбеливатель",
+      "name": "bleach",
+      "path": "1.13",
+      "link": "/household-chemicals/bleach"
+    },
+    {
+      "id": 29,
+      "title": "Подгузники",
+      "name": "diapers",
+      "path": "1.14",
+      "link": "/household-chemicals/diapers"
+    },
+    {
+      "id": 30,
+      "title": "Средства для бритья",
+      "name": "shaving",
+      "path": "1.15",
+      "link": "/household-chemicals/shaving"
+    },
+    {
+      "id": 31,
+      "title": "Средства для мытья посуды",
+      "name": "washing-utensils",
+      "path": "1.16",
+      "link": "/household-chemicals/washing-utensils"
+    },
+    {
+      "id": 32,
+      "title": "Средства личной гигиены",
+      "name": "personal-hygiene",
+      "path": "1.17",
+      "link": "/household-chemicals/personal-hygiene"
+    },
+    {
+      "id": 33,
+      "title": "Стиральный порошок",
+      "name": "washing-powder",
+      "path": "1.18",
+      "link": "/household-chemicals/washing-powder"
+    },
+    {
+      "id": 34,
+      "title": "Таблетки для унитаза",
+      "name": "еablets-for-toilet",
+      "path": "1.19",
+      "link": "/household-chemicals/еablets-for-toilet"
+    },
+    {
+      "id": 35,
+      "title": "Чистящие средства",
+      "name": "сleaners",
+      "path": "1.20",
+      "link": "/household-chemicals/сleaners"
+    },
+    {
+      "id": 36,
+      "title": "Шампуни и бальзамы для волос",
+      "name": "shampoos-and-balms-for-hair",
+      "path": "1.21",
+      "link": "/household-chemicals/shampoos-and-balms-for-hair"
+    },
+    {
+      "id": 37,
+      "title": "Бумага для заметок",
+      "name": "paper-for-notes",
+      "path": "3.1",
+      "link": "/paper-products/paper-for-notes"
+    },
+    {
+      "id": 38,
+      "title": "Маркеры и текстовыделители",
+      "name": "markers-and-text-highlighters",
+      "path": "3.2",
+      "link": "/paper-products/markers-and-text-highlighters"
+    },
+    {
+      "id": 39,
+      "title": "Банковская резинка",
+      "name": "bank rub",
+      "path": "3.3",
+      "link": "/paper-products/bank rub"
+    },
+    {
+      "id": 40,
+      "title": "Ручки",
+      "name": "pens",
+      "path": "3.4",
+      "link": "/paper-products/pens"
+    },
+    {
+      "id": 41,
+      "title": "Файлы-вкладыши",
+      "name": "files-liners",
+      "path": "3.5",
+      "link": "/paper-products/files-liners"
+    },
+    {
+      "id": 42,
+      "title": "Бокалы",
+      "name": "snifters",
+      "path": "5.1",
+      "link": "/disposable-tableware/snifters"
+    },
+    {
+      "id": 43,
+      "title": "Пищевые контейнеры",
+      "name": "food-containers",
+      "path": "5.2",
+      "link": "/disposable-tableware/food-containers"
+    },
+    {
+      "id": 44,
+      "title": "Одноразовые креманки",
+      "name": "disposable-crochets",
+      "path": "5.3",
+      "link": "/disposable-tableware/disposable-crochets"
+    },
+    {
+      "id": 45,
+      "title": "Кружки кофейные",
+      "name": "coffee-mugs",
+      "path": "5.4",
+      "link": "/disposable-tableware/coffee-mugs"
+    },
+    {
+      "id": 46,
+      "title": "Наборы одноразовой посуды",
+      "name": "sets-of-disposable-tableware",
+      "path": "5.5",
+      "link": "/disposable-tableware/sets-of-disposable-tableware"
+    },
+    {
+      "id": 47,
+      "title": "Подложка картонная",
+      "name": "cardboard-support",
+      "path": "5.6",
+      "link": "/disposable-tableware/cardboard-support"
+    },
+    {
+      "id": 48,
+      "title": "Подложка полистирольная",
+      "name": "polystyrene-substrate",
+      "path": "5.7",
+      "link": "/disposable-tableware/polystyrene-substrate"
+    },
+    {
+      "id": 49,
+      "title": "Рюмки",
+      "name": "wineglasses",
+      "path": "5.8",
+      "link": "/disposable-tableware/wineglasses"
+    },
+    {
+      "id": 50,
+      "title": "Стаканы",
+      "name": "glasses",
+      "path": "5.9",
+      "link": "/disposable-tableware/glasses"
+    },
+    {
+      "id": 51,
+      "title": "Столовые приборы",
+      "name": "cutlery",
+      "path": "5.10",
+      "link": "/disposable-tableware/cutlery"
+    },
+    {
+      "id": 52,
+      "title": "Тарелки",
+      "name": "soap",
+      "path": "5.11",
+      "link": "/disposable-tableware/dishes"
+    },
+    {
+      "id": 53,
+      "title": "БиоМикроГели",
+      "name": "BioMicroGeli",
+      "path": "2.1",
+      "link": "/professional-household-chemicals/BioMicroGeli"
+    },
+    {
+      "id": 54,
+      "title": "Сobra",
+      "name": "cobra",
+      "path": "2.2",
+      "link": "/professional-household-chemicals/cobra"
+    },
+    {
+      "id": 55,
+      "title": "Барные аксессуары",
+      "name": "bar-accessories",
+      "path": "6.1",
+      "link": "/table-decorations/bar-accessories"
+    },
+    {
+      "id": 56,
+      "title": "Зубочистки",
+      "name": "toothpicks",
+      "path": "6.2",
+      "link": "/table-decorations/toothpicks"
+    },
+    {
+      "id": 57,
+      "title": "Шпажки для шашлыка",
+      "name": "skewers-for-kebabs",
+      "path": "6.3",
+      "link": "/table-decorations/skewers-for-kebabs"
+    }, 
+    {
+      "id": 58,
+      "title": "Гриппер",
+      "name": "gripper",
+      "path": "7.1",
+      "link": "/packing-materials-and-bags/gripper"
+    },
+    {
+      "id": 59,
+      "title": "Картонная гофротара",
+      "name": "corrugated-paper",
+      "path": "7.2",
+      "link": "/packing-materials-and-bags/corrugated-paper"
+    },
+    {
+      "id": 60,
+      "title": "Малярная лента",
+      "name": "paint-tape",
+      "path": "7.3",
+      "link": "/packing-materials-and-bags/paint-tape"
+    },
+    {
+      "id": 61,
+      "title": "Мешки для мусора",
+      "name": "garbage-bags",
+      "path": "7.4",
+      "link": "/packing-materials-and-bags/garbage-bags"
+    },
+    {
+      "id": 62,
+      "title": "Мешоки для строительного мусора",
+      "name": "bags-for-construction-debris",
+      "path": "7.5",
+      "link": "/packing-materials-and-bags/bags-for-construction-debris"
+    },
+    {
+      "id": 63,
+      "title": "Пакеты с пластиковой ручкой",
+      "name": "packages-with-plastic-handle",
+      "path": "7.6",
+      "link": "/packing-materials-and-bags/packages-with-plastic-handle"
+    },
+    {
+      "id": 64,
+      "title": "Пакеты с вырубной ручкой",
+      "name": "packages-with-a-cutting-handle",
+      "path": "7.7",
+      "link": "/packing-materials-and-bags/packages-with-a-cutting-handle"
+    },
+    {
+      "id": 65,
+      "title": "Пакеты с петлевой ручкой",
+      "name": "зackages-with-loop-handle",
+      "path": "7.8",
+      "link": "/packing-materials-and-bags/зackages-with-loop-handle"
+    },
+    {
+      "id": 66,
+      "title": "Пакет фасовочный",
+      "name": "packing-packages",
+      "path": "7.9",
+      "link": "/packing-materials-and-bags/packing-packages"
+    },
+    {
+      "id": 67,
+      "title": "Пакет-майка",
+      "name": "package-shirt",
+      "path": "7.10",
+      "link": "/packing-materials-and-bags/package-shirt"
+    },
+    {
+      "id": 68,
+      "title": "Пленка пищевая",
+      "name": "food-clingfilm",
+      "path": "7.11",
+      "link": "/packing-materials-and-bags/food-clingfilm"
+    },
+    {
+      "id": 69,
+      "title": "Скотч",
+      "name": "scotch",
+      "path": "7.12",
+      "link": "/packing-materials-and-bags/scotch"
+    },
+    {
+      "id": 70,
+      "title": "Стрейч-пленка",
+      "name": "clingfilm",
+      "path": "7.13",
+      "link": "/packing-materials-and-bags/clingfilm"
+    }, 
+    {
+      "id": 71,
+      "title": "Батарейки",
+      "name": "batteries",
+      "path": "8.1",
+      "link": "/household-goods/batteries"
+    },
+    {
+      "id": 72,
+      "title": "Ватные диски и палочки",
+      "name": "сotton-swabs-and-wands",
+      "path": "8.2",
+      "link": "/household-goods/сotton-swabs-and-wands"
+    },
+    {
+      "id": 73,
+      "title": "Влажные салфетки",
+      "name": "wet-wipes",
+      "path": "8.3",
+      "link": "/household-goods/wet-wipes"
+    },
+    {
+      "id": 74,
+      "title": "Губки для посуды",
+      "name": "sponges-for-tableware",
+      "path": "8.4",
+      "link": "/household-goods/sponges-for-tableware"
+    },
+    {
+      "id": 75,
+      "title": "Губки и мочалки для тела",
+      "name": "sponges-and-body-wipes",
+      "path": "8.5",
+      "link": "/household-goods/sponges-and-body-wipes"
+    },
+    {
+      "id": 76,
+      "title": "Изолента",
+      "name": "insulating-tape",
+      "path": "8.6",
+      "link": "/household-goods/insulating-tape"
+    },
+    {
+      "id": 77,
+      "title": "Клей",
+      "name": "glue",
+      "path": "8.7",
+      "link": "/household-goods/glue"
+    },
+    {
+      "id": 78,
+      "title": "Крышки и закаточные машинки",
+      "name": "сovers-and-closing-machines",
+      "path": "8.8",
+      "link": "/household-goods/сovers-and-closing-machines"
+    },
+    {
+      "id": 79,
+      "title": "Кухонные принадлежности",
+      "name": "kitchen-accessories",
+      "path": "8.9",
+      "link": "/household-goods/kitchen-accessories"
+    },
+    {
+      "id": 80,
+      "title": "Лампочки",
+      "name": "light-bulbs",
+      "path": "8.10",
+      "link": "/household-goods/light-bulbs"
+    },
+    {
+      "id": 81,
+      "title": "Наполнитель для кошачих туалетов",
+      "name": "filler-for-cat-litter",
+      "path": "8.11",
+      "link": "/household-goods/filler-for-cat-litter"
+    },
+    {
+      "id": 82,
+      "title": "Оцинкованные изделия",
+      "name": "galvanized-products",
+      "path": "8.12",
+      "link": "/household-goods/galvanized-products"
+    },
+    {
+      "id": 83,
+      "title": "Резиновые и рабочие перчатки",
+      "name": "rubber-and-work-gloves",
+      "path": "8.13",
+      "link": "/household-goods/rubber-and-work-gloves"
+    },
+    {
+      "id": 84,
+      "title": "Пластиковые изделия",
+      "name": "plastic-products",
+      "path": "8.14",
+      "link": "/household-goods/plastic-products"
+    },
+    {
+      "id": 85,
+      "title": "Принадлежности для пикника",
+      "name": "picnic-accessories",
+      "path": "8.15",
+      "link": "/household-goods/picnic-accessories"
+    },
+    {
+      "id": 86,
+      "title": "Прочие товары",
+      "name": "other-products",
+      "path": "8.16",
+      "link": "/household-goods/other-products"
+    },
+    {
+      "id": 87,
+      "title": "Хозяйственные салфетки и полотно",
+      "name": "household-napkins-and-linen",
+      "path": "8.17",
+      "link": "/household-goods/household-napkins-and-linen"
+    },
+    {
+      "id": 88,
+      "title": "Свечи хозяйственные",
+      "name": "household-candles",
+      "path": "8.18",
+      "link": "/household-goods/household-candles"
+    },
+    {
+      "id": 89,
+      "title": "Скатерти",
+      "name": "tablecloths",
+      "path": "8.19",
+      "link": "/household-goods/tablecloths"
+    },
+    {
+      "id": 90,
+      "title": "Средства для ухода за обувью",
+      "name": "means-for-the-care-of-shoes",
+      "path": "8.20",
+      "link": "/household-goods/means-for-the-care-of-shoes"
+    },
+    {
+      "id": 91,
+      "title": "Уборочный инвентарь",
+      "name": "harvesting-equipment",
+      "path": "8.21",
+      "link": "/household-goods/harvesting-equipment"
+    },
+    {
+      "id": 92,
+      "title": "Фольга пищевая",
+      "name": "food-foil",
+      "path": "8.22",
+      "link": "/household-goods/food-foil"
+    },
+    {
+      "id": 93,
+      "title": "Шпагат",
+      "name": "twine",
+      "path": "8.23",
+      "link": "/household-goods/twine"
+    },
+    {
+      "id": 94,
+      "title": "Щетки хозяйственные",
+      "name": "household-brushes",
+      "path": "8.24",
+      "link": "/household-goods/household-brushes"
     }
   ]
 }
