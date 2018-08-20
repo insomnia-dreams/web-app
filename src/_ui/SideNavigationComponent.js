@@ -16,7 +16,7 @@ const LinkWrapper = styled.div`
 `
 
 const StyledLink = styled(Link)`
-  color: ${COLORS.SIDE_NAV_LINK};
+  color: ${COLORS.LINK_2};
   font-size: 14px;
   text-decoration: none;
   font-weight: 600;
@@ -66,7 +66,7 @@ class SideNavigationComponent extends Component {
             {this.state.isOpen && this.state.categoryId === category.id ?
               <DropDownComponent 
                 leftOffset={this.sideNavigation.offsetWidth} 
-                title={category.title} 
+                category={category} 
                 subCategories={this.findSubCategories(category.id)}
               />
               : null}

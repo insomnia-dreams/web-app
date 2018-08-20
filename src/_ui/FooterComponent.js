@@ -25,13 +25,13 @@ const Column = styled.div`
 const ColumnHeader = styled.span`
   font-weight: 600;
   text-transform: uppercase;
-  color: ${COLORS.FOOTER_HEADER};
+  color: ${COLORS.LINK_1};
   font-size: 14px;
   line-height: 30px;
 `
 
 const ColumnLink = styled(Link)`
-  color: ${COLORS.FOOTER_HEADER};
+  color: ${COLORS.LINK_1};
   font-size: 14px;
   line-height: 30px;
 `
