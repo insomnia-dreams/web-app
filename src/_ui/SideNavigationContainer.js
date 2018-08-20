@@ -58,23 +58,25 @@ class SideNavigationContainer extends Component {
     const { catalog } = this.props
     return (
       <Wrapper innerRef={comp => this.sideNav = comp}>
-        {catalog.length && 
+        {catalog.length &&
           catalog.filter(category => category.path.length === 1)
-          .map(category => (
-            <LinkWrapper
-              key={category.id}
-              onMouseEnter={(e) => this.showSideNavigation(e, category.name)}
-              onMouseLeave={this.hideSideNavigation}
-            >
-              <StyledLink to={category.link}>{category.title}</StyledLink>
-              {this.state.isOpen ?
-                <DropDown
-                  innerRef={comp => this.dropDown = comp}
-                  leftOffset={this.sideNav.offsetWidth}
-                >{this.state.name}</DropDown>
-                : null}
-            </LinkWrapper>
-          ))}
+            .map(category => (
+              <LinkWrapper
+                key={category.id}
+                onMouseEnter={(e) => this.showSideNavigation(e, category.name)}
+                onMouseLeave={this.hideSideNavigation}
+              >
+                <StyledLink to={category.link}>{category.title}</StyledLink>
+                {this.state.isOpen && this.state.name === category.name ?
+                  <DropDown
+                    innerRef={comp => this.dropDown = comp}
+                    leftOffset={this.sideNav.offsetWidth}
+                  >
+                  {category.title}
+                  </DropDown>
+                  : null}
+              </LinkWrapper>
+            ))}
       </Wrapper>
     )
   }
