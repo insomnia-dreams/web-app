@@ -41,23 +41,17 @@ const StyledLink = styled(Link)`
 class SideNavigationComponent extends Component {
   constructor(props) {
     super(props)
-    /* this.state = {
-      isOpen: false,
-      categoryId: ''
-    } */
     this.sideNavigation = React.createRef()
   }
 
   showSideNavigation = (e, categoryId) => {
     const { openSideNavigation } = this.props
-    //this.setState({ isOpen: true, categoryId })
     openSideNavigation(categoryId)
     this.findSubCategories(categoryId)
   }
 
   hideSideNavigation = (e) => {
     const { closeSideNavigation } = this.props
-    //this.setState({ isOpen: false, categoryId: '' })
     closeSideNavigation()
   }
 
