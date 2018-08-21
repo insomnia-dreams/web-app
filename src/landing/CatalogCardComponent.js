@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 
 const CardWrapper = styled.div`
   width: 465px;
@@ -22,13 +23,24 @@ const CardText = styled.span`
   color: #fff;
 `
 
+const StyledLink = styled(Link)`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+`
+
 const CatalogCardComponent = ({ category }) => {
   const { id, title } = category
   return (
     <CardWrapper id={id}>
-      <CardText id={id}>
-        {title}
-      </CardText>
+      <StyledLink to={category.link}>
+        <CardText id={id}>
+          {title}
+        </CardText>
+      </StyledLink>
     </CardWrapper>
   )
 }

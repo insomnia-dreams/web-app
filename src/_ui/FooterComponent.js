@@ -46,18 +46,27 @@ const FooterComponent = () => {
             <ColumnHeader>компания</ColumnHeader>
             {/* информация о компании => нужно придумать название!!! */}
             <ColumnLink to={routes.ABOUT}>О нас</ColumnLink>
-            <ColumnLink to={routes.CAREERS}>Вакансии</ColumnLink>
+            <ColumnLink to={routes.ABOUT}>Реквизиты</ColumnLink>
             <ColumnLink to={routes.NEWS}>Hовости</ColumnLink>
+            <ColumnLink to={routes.CAREERS}>Вакансии</ColumnLink>
           </Column>
           <Column>
             <ColumnHeader>контакты</ColumnHeader>
+            <ColumnLink to={routes.ABOUT}>Офис в Екатеринбурге</ColumnLink>
+            <a href="tel:+7-343-222-62-40">+7 (343) 222-62-40</a>
           </Column>
           <Column>
             <ColumnHeader>помощь</ColumnHeader>
+            <ColumnLink to={routes.PRIVACY_POLICY}>Как сделать заказ</ColumnLink>
+            <ColumnLink to={routes.PRIVACY_POLICY}>Способы оплаты</ColumnLink>
+            <ColumnLink to={routes.PRIVACY_POLICY}>Доставка товара</ColumnLink>
+            <ColumnLink to={routes.PRIVACY_POLICY}>Возврат товара</ColumnLink>
             <ColumnLink to={routes.PRIVACY_POLICY}>Политика конфиденциальности</ColumnLink>
           </Column>
           <Column>
             <ColumnHeader>бизнес</ColumnHeader>
+            <ColumnLink to={routes.PRIVACY_POLICY}>Скидки</ColumnLink>
+            <ColumnLink to={routes.PRIVACY_POLICY}>Сотрудничество</ColumnLink>
           </Column>
           {/* компания */}
           {/* контакты */}
