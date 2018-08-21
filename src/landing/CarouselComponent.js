@@ -5,11 +5,13 @@ import { Link } from 'react-router-dom'
 import * as routes from '../_constants/routes'
 
 const Arrow = styled.a`
-  color: #111;
+  display: block;
   position: absolute;
   top: 50%;
-  display: block;
-  opacity: .65;
+  transform: translateY(-50%);
+  color: #111;
+  opacity: .75;
+  transition: opacity .15s cubic-bezier(.4, 0, 1, 1);
   &:hover {
     opacity: .5;
   }
@@ -70,6 +72,7 @@ const CarouselIndicatorLink = styled.a`
   background-color: #111;
   cursor: pointer;
   opacity: ${props => props.active ? '.75' : '.15'};
+  transition: opacity .15s cubic-bezier(.4, 0, 1, 1);
   &:hover {
     opacity: .5;
   }
@@ -118,6 +121,8 @@ const CarouselWrapper = styled.div`
   position: relative;
 
 `
+
+const CarouselSlidesWrapper = styled.div``
 
 class CarouselComponent extends Component {
   constructor(props) {
@@ -179,7 +184,7 @@ class CarouselComponent extends Component {
     return (
       <CarouselWrapper>
         <CarouselLeftArrow onClick={e => this.goToPrevSlide(e)} />
-        <div>
+        <CarouselSlidesWrapper>
           {this.state.carouselSlides.map((slide, index) =>
             <CarouselSlide
               key={index}
@@ -187,7 +192,7 @@ class CarouselComponent extends Component {
               activeIndex={this.state.activeIndex}
               slide={slide}
             />)}
-        </div>
+        </CarouselSlidesWrapper>
         <CarouselRightArrow onClick={e => this.goToNextSlide(e)} />
         <CarouselIndicators className="carousel__indicators">
           {this.state.carouselSlides.map((slide, index) =>
