@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import { COLORS } from '../_constants/styles';
 
 const DropDown = styled.div`
+  z-index: 3;
   height: 600px;
   width: 530px;
   position: absolute;

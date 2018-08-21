@@ -4,16 +4,34 @@ import { Link } from 'react-router-dom'
 
 import * as routes from '../_constants/routes'
 
+const Arrow = styled.a`
+  color: #111;
+  position: absolute;
+  top: 50%;
+  display: block;
+  opacity: .65;
+  &:hover {
+    opacity: .5;
+  }
+`
+const ArrowLeft = styled(Arrow)`
+  left: 32px;
+`
+
+const ArrowRight = styled(Arrow)`
+  right: 32px;
+`
+
 export class CarouselLeftArrow extends Component {
   render() {
     return (
-      <a
-      href="#"
-      className="carousel__arrow carousel__arrow--left"
-      onClick={this.props.onClick}
+      <ArrowLeft
+        href="#"
+        className="carousel__arrow carousel__arrow--left"
+        onClick={this.props.onClick}
       >
         <span className="fa fa-2x fa-angle-left" />
-      </a>
+      </ArrowLeft>
     );
   }
 }
@@ -21,13 +39,55 @@ export class CarouselLeftArrow extends Component {
 export class CarouselRightArrow extends Component {
   render() {
     return (
-      <a
-      href="#"
-      className="carousel__arrow carousel__arrow--right"
-      onClick={this.props.onClick}
+      <ArrowRight
+        href="#"
+        className="carousel__arrow carousel__arrow--right"
+        onClick={this.props.onClick}
       >
         <span className="fa fa-2x fa-angle-right" />
-      </a>
+      </ArrowRight>
+    );
+  }
+}
+
+const CarouselIndicators = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 10px;
+  list-style-type: none;
+  li {
+    &:nth-of-type(n+2) {
+      margin-left: 9px;
+    }
+  }
+`
+
+const CarouselIndicatorLink = styled.a`
+  display: block;
+  width: 24px;
+  height: 3px;
+  background-color: #111;
+  cursor: pointer;
+  opacity: ${props => props.active ? '.75' : '.15'};
+  &:hover {
+    opacity: .5;
+  }
+`
+
+export class CarouselIndicator extends Component {
+  render() {
+    return (
+      <li>
+        <CarouselIndicatorLink active={this.props.index == this.props.activeIndex}
+          className={
+            this.props.index == this.props.activeIndex
+              ? "carousel__indicator carousel__indicator--active"
+              : "carousel__indicator"
+          }
+          onClick={this.props.onClick}
+        />
+      </li>
     );
   }
 }
@@ -54,7 +114,9 @@ export class CarouselSlide extends Component {
 }
 
 const CarouselWrapper = styled.div`
-  margin: 4px 0;
+  /* margin: 4px 0; */
+  position: relative;
+
 `
 
 class CarouselComponent extends Component {
@@ -127,6 +189,17 @@ class CarouselComponent extends Component {
             />)}
         </div>
         <CarouselRightArrow onClick={e => this.goToNextSlide(e)} />
+        <CarouselIndicators className="carousel__indicators">
+          {this.state.carouselSlides.map((slide, index) =>
+            <CarouselIndicator
+              key={index}
+              index={index}
+              activeIndex={this.state.activeIndex}
+              isActive={this.state.activeIndex === index}
+              onClick={e => this.goToSlide(index)}
+            />
+          )}
+        </CarouselIndicators>
       </CarouselWrapper>
     )
   }

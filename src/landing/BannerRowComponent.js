@@ -8,7 +8,7 @@ const Image = styled.img`
 `
 
 const Wrapper = styled.div`
-  margin: 4px 0;
+  margin: 13px 0;
 `
 
 const BannerRowComponent = () => {
