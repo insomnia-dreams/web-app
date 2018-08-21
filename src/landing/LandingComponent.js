@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 import MaxWidthWrapper from '../_ui/MaxWidthWrapper'
 import CatalogContainer from "./CatalogContainer"
-import BannerBoxComponent from './BannerBoxComponent'
+import CarouselComponent from './CarouselComponent'
 import BannerRowComponent from './BannerRowComponent'
 import BannerSideComponent from './BannerSideComponent'
 import ExcellenceComponent from './ExcellenceComponent'
@@ -42,7 +42,7 @@ class LandingComponent extends Component {
             <SideNavigationContainer />
           </LeftSidebar>
           <Content>
-            <BannerBoxComponent />
+            <CarouselComponent />
             <BannerRowComponent />
             <ExcellenceComponent />
             <CatalogContainer />
