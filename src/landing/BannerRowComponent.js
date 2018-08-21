@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
-//import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
+
+import * as routes from '../_constants/routes'
 
 const Image = styled.img`
   width: 50%;
@@ -14,12 +16,12 @@ const Wrapper = styled.div`
 const BannerRowComponent = () => {
   return (
     <Wrapper>
-      <a>
+      <Link to={routes.SALES}>
         <Image src="/images/banner_row/banner_row1.png" alt="banner" />
-      </a>
-      <a>
+      </Link>
+      <Link to={routes.SALES}>
         <Image src="/images/banner_row/banner_row2.png" alt="banner" />
-      </a>
+      </Link>
     </Wrapper>
   )
 }
