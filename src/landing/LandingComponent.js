@@ -22,7 +22,7 @@ const LeftSidebar = styled.aside`
 `
 
 const RightSidebar = styled.aside`
-  flex-basis: 17%;
+  flex-basis: 15%;
   border: 1px solid goldenrod;
   flex-shrink: 0;
 `

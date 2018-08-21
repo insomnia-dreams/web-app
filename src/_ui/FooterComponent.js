@@ -9,10 +9,11 @@ import { COLORS } from '../_constants/styles'
 const FlexWrapper = styled.div`
   display: flex;
   border: 1px solid black;
+  width: 100%;
 `
 const PositionWrapper = styled.div`
-  margin-left: 14%;
-  flex-basis: 68%;
+  margin-left: 14.7%;
+  flex-basis:69%;
   display: flex;
 `
 const Column = styled.div`
