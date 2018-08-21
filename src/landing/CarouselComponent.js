@@ -3,13 +3,14 @@ import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 
 import * as routes from '../_constants/routes'
+import { COLORS } from '../_constants/styles'
 
 const Arrow = styled.a`
   display: block;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  color: #111;
+  color: ${COLORS.LINK_2};
   opacity: .75;
   transition: opacity .15s cubic-bezier(.4, 0, 1, 1);
   &:hover {
@@ -69,7 +70,7 @@ const CarouselIndicatorLink = styled.a`
   display: block;
   width: 24px;
   height: 3px;
-  background-color: #111;
+  background-color: ${COLORS.LINK_2};
   cursor: pointer;
   opacity: ${props => props.active ? '.75' : '.15'};
   transition: opacity .15s cubic-bezier(.4, 0, 1, 1);
