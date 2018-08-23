@@ -68,11 +68,6 @@ const FooterComponent = () => {
             <ColumnLink to={routes.PRIVACY_POLICY}>Скидки</ColumnLink>
             <ColumnLink to={routes.PRIVACY_POLICY}>Сотрудничество</ColumnLink>
           </Column>
-          {/* компания */}
-          {/* контакты */}
-          {/* помощь */}
-          {/* бизнес | Юридическим лица */}
-          {/* **новости */}
           {/* ************** */}
           {/* соцсети */}
           {/* способы оплаты */}
