@@ -134,7 +134,10 @@ class CarouselComponent extends Component {
       carouselSlides: [
         { src: "carousel1.jpg" },
         { src: "carousel2.jpg" },
-        { src: "carousel3.jpg" }
+        { src: "carousel3.jpg" },
+        { src: "carousel1.jpg" },
+        { src: "carousel2.jpg" },
+        { src: "carousel3.jpg" },
       ]
     };
   }
